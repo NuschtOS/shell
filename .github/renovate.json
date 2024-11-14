@@ -13,6 +13,12 @@
   "nix": {
     "enabled": true
   },
+  "packageRules": [
+    {
+      "matchManagers": ["nix"],
+      "groupName": "flake inputs"
+    }
+  ],
   "osvVulnerabilityAlerts": true,
   "prHourlyLimit": 0,
   "schedule": [
