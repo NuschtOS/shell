@@ -5,7 +5,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixos-modules = {
       url = "github:NuschtOS/nixos-modules";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        flake-utils.follows = "flake-utils";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
     nixpkgs.url = "github:NuschtOS/nuschtpkgs/nixos-unstable";
     nvim = {
